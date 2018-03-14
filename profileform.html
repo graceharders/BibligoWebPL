@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href = "profile.css">
+	<title>Sign in | Bibligo</title>
+</head>
+<body>
+<div class = "bib"><div style="text-align: center;"><img src = "BL.png"></div></div>
+<div class = "prof"><div style="text-align: center;"><img src = "default.jpg"></div></div>
+<div style="text-align: center;"><button type = "button">Change Picture</button></div>
+<div style = "text-align:center;"><form action="profileform.html" onsubmit="return ()">
+	<label>Username: </label>
+	<input type = "text" id ="usern" autofocus required />
+	<div id="u-msg" class = "feedback"></div>
+	<br/>
+	<label>Password: </label>
+	<input type = "password" id="pass" required/>
+	<div id = "p-msg" class="feedback"></div>
+	<br/>
+	<label>Name: </label>
+	<input type = "name" id = "name"/>
+	<div id = "n-msg" class = "feedback"></div>
+	<br/>
+	<label>Age: </label>
+	<input type = "age" id = "age"/>
+	<div id = "a-msg" class = "feedback"></div>
+	<br/>
+	<a href = "profile.html"><button type = "button">Submit</button></a>
+</form></div>
+
+<script>
+	function checkUsern(){
+		var msg = document.getElementById("u-msg");
+		if(this.value.length < 3 && this.value.length > 0)
+			msg.textContent = "Please choose a longer username!";
+		else
+			msg.textContent = "";
+	}
+	var user = document.getElementById("usern");
+	user.onblur = checkUsern;
+	function checkPwd(){
+		var msg = document.getElementById("p-msg");
+		if(this.value.length < 3 && this.value.length >0)
+			msg.textContent = "Please choose a longer password!";
+		else
+			msg.textContent="";
+	}
+	var user = document.getElementById("pass");
+	user.onblur = checkPwd;
+	function verify(){
+		var user = document.getElementById("usern");
+		var pwd = document.getElementById("pass");
+		var name = document.getElementById("name");
+		var age = document.getElementById("age");
+		alert("Welcome " + name + " your username is " + usern + " and your password is " + pass + "! Please write this down and keep it in a safe place!" );
+	}
+</script>
+</body>
+</html>

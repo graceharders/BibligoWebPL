@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name = "title" content="Bibligo">
+	<meta name="authors" content="Grace Harders and Scott Miller">
+	<meta name ="descriptions" content="This page is story-finding site">
+	<meta name="keywords" content="story, children, project, bibligo">
+	<title>Bibligo</title>
+	<link rel="stylesheet" href = "main.css">
+</head>
+<body>
+	<div style = "text-align: center;"><img src = "BL.png" style= "width: 30%"></div>
+	<div class = "nav">
+	<ul>
+		<li id="login">Login</li>
+		<div id="myModal" class="modal">
+  		<div class="modal-content">
+    	<span class="close">&times;</span>
+    	<div style = "text-align: center;"><h1> Log In to Bibligo: </h1></div>
+    		<div style = "text-align:center;"><form action="session-set.php" method="post">
+     <fieldset>
+       <legend>Enter your information</legend>
+       Name: <br/><input type="text" name="user" /> <br />
+       Password: <br/><input type="password" name="pwd" /> <br />
+       <input type="submit" value="Log in" />
+    </fieldset>    
+   </form></div>
+  		</div></div>
+		<li><a href="">Contact</a></li>
+		<li><a href = ""> Sources </a></li>
+		<li><a href="AboutUs.html">About</a></li>
+		<li><a href="">Search</a></li>
+	</ul>
+	</div>
+	<div class = "tag"><p>Click on a continent to find a story!</p></div>
+	<div class="map">
+	<img src="theworld.jpg" alt="" usemap="#Map" />
+<map name="Map" id="Map">
+    <div class = "africa"><area alt="" title="Africa" href="africa.html" shape="poly" coords="576,307,549,304,536,303,518,300,513,289,487,292,461,300,456,311,453,320,439,339,438,365,452,386,471,395,484,391,497,391,513,398,513,413,523,430,519,448,523,477,534,494,538,510,545,516,568,512,580,487,585,470,594,458,600,449,600,428,608,404,622,394,629,374,617,371,601,368,593,355,583,333,582,323,582,317" /></div>
+</map> </div>
+	<div class="social">
+	<div class="fb"><img src = "facebook.png"></div>
+	<p>Bibligo Facebook</p>
+	<div class="twitter"><img src = "twitter.png"></div>
+	<p>Bibligo Twitter</p></div>
+	<div class="final-img"><img src = "BL.png">
+	<p>Copyright by Grace Harders and Scott Miller</p></div>
+	<script>
+	var modal = document.getElementById('myModal');
+	var login = document.getElementById("login");
+	var span = document.getElementsByClassName("close")[0];
+	login.onclick = function() {
+    	modal.style.display = "block";
+	}
+	span.onclick = function() {
+    	modal.style.display = "none";
+	}
+	window.onclick = function(event) {
+    	if (event.target == modal) {
+        	modal.style.display = "none";
+    }
+}
+//Citation for modal box: https://www.w3schools.com/howto/howto_css_modals.asp
+</script>
+</body>
+</html>
